@@ -1,0 +1,50 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/about/about",
+    "pages/my_stuff/my_stuff",
+    "pages/show/show",
+    "pages/canvas/canvas",
+    "pages/savePhoto/savePhoto",
+    "pages/stuverify/stuverify",
+    "pages/user/user",
+    "pages/filter/filter",
+    "pages/create/create",
+    "pages/search/search",
+    "pages/create/general_create/general_create",
+    "pages/create/card_create/card_create",
+    "pages/login/login",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "工大威海失物招领",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#f96159",
+    "color": "#707070",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "广场",
+        "iconPath": "icon/tabbar/index_un.png",
+        "selectedIconPath": "icon/tabbar/index_active.png"
+      },
+      {
+        "pagePath": "pages/create/create",
+        "text": "发布",
+        "iconPath": "icon/tabbar/broad_un.png",
+        "selectedIconPath": "icon/tabbar/broad_active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "icon/tabbar/mine_un.png",
+        "selectedIconPath": "icon/tabbar/mine_active.png"
+      }
+    ]
+  }
+}

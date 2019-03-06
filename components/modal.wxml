@@ -1,0 +1,13 @@
+<view hidden='{{!isShow}}'>
+  <view class="modal" catchtap='_preventtap'>
+    <view class='modal-content'>
+      <view class='modal-top'>
+        <view class='header'>分享</view>
+      </view>
+      <view class='modal-body'>
+        <view catchtap='_makephoto'><image class='item1' src='/images/make.png'/></view>
+        <button catchtap='bull' class='button' open-type='share'><image class='item2' src='/images/sharewechat.png' /></button>
+      </view>
+    </view>
+  </view>
+</view>
