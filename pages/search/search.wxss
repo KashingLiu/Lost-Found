@@ -1,0 +1,103 @@
+@import "/pages/index/anchorTemplate/anchor.wxss";
+page{
+  background-color: #F8F8F8;
+  /* background-color: black; */
+}
+
+.container {
+  display:flex;
+  flex-direction: column;
+  /* margin: 0 30rpx; */
+  padding: 0;
+}
+.top {
+  width: 100%;
+  height: 40rpx;
+  background: #fff;
+  position: fixed;
+  top:0;
+  z-index: 4;
+}
+.title {
+  width: 100%;
+  height: 88rpx;
+  background: #fff;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 34rpx;
+  color: #1a53bb;
+}
+.header {
+    display:flex;
+    flex-direction:column;
+    width: 100%;
+    /* height: 60rpx; */
+    position: fixed;
+    top: 0rpx;
+    background: #fff;
+    z-index: 4;
+    padding-top: 80rpx;
+}
+.header .select {
+  display:flex;
+  flex-direction: row;
+  margin-bottom: 6rpx;
+}
+.header .select view{
+   width: 50%;
+   height: 60rpx;
+   text-align: center;
+   line-height: 60rpx;
+   font-size: 26rpx;
+   color: #666666;
+}
+.header view.on{
+  color: #1a53bb;
+  position: relative;
+}
+.header view.on::after {
+  content:'';
+  display:inline-block;
+  width: 20rpx;
+  height: 4rpx;
+  background: #1a53bb;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%)
+}
+.list {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex:1; 
+  /* margin-top: 228rpx; */
+  /* margin-bottom: 20rpx; */
+}
+.list .anchor:nth-child(2n) {
+  margin-right: 0;
+}
+.list .tips {
+  display:block;
+  width: 100%;
+  height: 80rpx;
+  font-size: 28rpx;
+  text-align: center;
+  color: #bbb;
+  margin-top: 10rpx;
+  line-height: 80rpx;
+}
+/* 影藏scroll-view滚动条 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+
+.list1 {
+height: 100%;
+width: 100%;
+}
+
+.weui-icon-clear{position:absolute;top:0;right:0;padding:7px 8px;font-size:0}

@@ -1,0 +1,46 @@
+<import src="/pages/index/anchorTemplate/anchor.wxml"/>
+
+<view wx:if="{{!hide}}" class="container">
+  <!-- <scroll-view 
+    bindscrolltolower="bindDownLoad" 
+    bindscrolltoupper="topLoad"
+    scroll-y="true" 
+    style='height:{{scrollHeight}}px;'
+    > -->
+
+    <view class='list1' >
+
+        <view 
+          class="weui-search-bar" 
+          style='position:fixed;width:100%;z-index:999;border-top:0;border-bottom:0;background-color:white;'>
+          <view class="weui-search-bar__form">
+            <view class="weui-search-bar__box">
+              <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+              <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindblur='hideInput' bindconfirm='search' type='text' confirm-type='search'/>
+                <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                  <icon type="clear" size="14"></icon>
+                </view>
+            </view>
+            <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+              <icon class="weui-icon-search"  style='margin-top:-2px;' type="search" size="14"></icon>
+              <view class="weui-search-bar__text" style='margin-top:-2.5px;'>搜索</view>
+            </label>
+          </view>
+        </view>
+
+        <view  class="list" style='margin-top:48px;'>
+          <block wx:if="{{!loading}}" wx:for="{{currentList}}" wx:for-item="item" wx:key="{{item.id}}">
+            <view class="anchor" catchtap="detailTap" data-anchorobj="{{item}}">
+              <template is="anchorTmp" data="{{item}}"/>
+            </view>
+          </block>
+          <view class="weui-loadmore" wx:if="{{loading}}">
+            <view class="weui-loading"></view>
+            <view class="weui-loadmore__tips">正在加载</view>
+          </view>
+          <view wx:if="{{isNone}}" class="tips">我是有底线的！</view>
+        </view>
+
+    </view>
+  <!-- </scroll-view> -->
+</view>

@@ -1,0 +1,37 @@
+<form bindsubmit="bindsubmit">
+  <view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+      <view class="page__bd">
+          <view class="weui-cells__title">验证您的身份</view>
+          <view 
+            class="weui-cells weui-cells_after-title"
+          >
+              <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__hd">
+                      <view class="weui-label" style='width: 50px;'>学号</view>
+                  </view>
+                  <view class="weui-cell__bd">
+                      <input name="stuid" class="weui-input" placeholder="请输入学号"/>
+                  </view>
+              </view>
+              <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__hd">
+                      <view class="weui-label" style='width: 50px;'>密码</view>
+                  </view>
+                  <view class="weui-cell__bd">
+                      <input name="pwd" class="weui-input" type='password' placeholder="请输入教务系统密码" />
+                  </view>
+              </view>
+          </view>
+          <view class="weui-cells__title">温馨提示：
+          以上密码为选课系统密码。</view>
+
+          <view class="weui-btn-area" style='margin-top:15rpx;'>
+              <button 
+                class="weui-btn"
+                form-type='submit'
+                style="background-color:#f96159;color:white;"
+              >确定</button>
+          </view>
+      </view>
+  </view>
+</form>

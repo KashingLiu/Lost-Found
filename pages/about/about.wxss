@@ -1,0 +1,42 @@
+.btn{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  position: fixed;
+  background: rgba(0,155,0,0);
+  top: 0;
+}
+button::after{
+  border:none;
+}
+.aa{
+  width: 800rpx;
+  height: 1000rpx;
+  background: rgba(0,155,0,0);
+  position:fixed;
+  top: 0;
+}
+
+
+.btn1{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  position: fixed;
+  background: rgba(0,155,0,0);
+  bottom: 0;
+}
+button::after{
+  border:none;
+}
+.aa1{
+  width: 800rpx;
+  height: 100rpx;
+  background: rgba(0,155,0,0);
+  position:fixed;
+  bottom: 0;
+}

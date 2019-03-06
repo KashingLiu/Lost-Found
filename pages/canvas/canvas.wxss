@@ -1,0 +1,56 @@
+.open-seting-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.btn-openset {
+  display: flex;
+  justify-content: space-around;
+  font-size: 30rpx;
+  position: relative;
+  bottom: -90rpx;
+  /* margin-top: 60rpx; */
+}
+
+.set-title {
+  font-size: 30rpx;
+  /* margin-top: 40rpx; */
+}
+
+.open-set-inner {
+  width: 400rpx;
+  height: 220rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background: #ffffff;
+  padding: 30rpx;
+}
+
+.btn-openset > view:nth-child(1) {
+  color: #919191;
+}
+
+.button-style {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0;
+  font-size: 30rpx;
+  line-height: 0;
+  color: red;
+}
+
+button::after {
+  border: 0;
+}

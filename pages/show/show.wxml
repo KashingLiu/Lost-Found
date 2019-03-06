@@ -1,0 +1,92 @@
+<view wx:if='{{!hide}}' class="page">
+  <view class="page__bd">
+
+
+    <view class="weui-panel">
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_text mediabox">
+          <view class="weui-media-box__title weui-media-box__title_in-text title">{{detail.name}}</view>
+          <view class="weui-media-box__desc detail">{{contacts.detail}}</view>
+          <view class="weui-media-box__info">
+            <view class="weui-media-box__info__meta infotext">{{detail.time}}</view>
+            <!-- <view class="weui-media-box__info__meta">时间</view>
+            <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">其它信息</view> -->
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+    <view class="weui-cells__title">联系方式</view>
+    <view class="weui-panel" style='margin-top:0;'>
+      <view>
+
+        <view class='weui-panel__hd' style='padding:0;font-size=17px;color:black;'>
+          <view wx:if="{{haslocation}}" class="weui-cell weui-cell_access" style='padding-bottom:8px;'>
+            <image src="{{placeicon}}" style="width: 20px;height: 20px;margin-right: 5px" />
+            <view class="weui-cell__hd weui-cell_primary">
+                <view style='font-size:17px;'>{{contacts.place}}</view>
+            </view>
+            <!-- <view class="weui-cell__ft weui-cell__ft_in-access"></view> -->
+          </view>
+        </view>
+
+        <view class="weui-panel__bd" style="border-top:{{hasborder}}">
+          <view class="weui-media-box weui-media-box_small-appmsg">
+            <view class="weui-cells weui-cells_in-small-appmsg">
+
+              <view wx:if="{{hasqq}}" class="weui-cell weuis-cell_access">
+                <image src="{{qqicon}}" style="width: 20px;height: 20px;margin-right: 5px" />
+                <view class="weui-cell__bd weui-cell_primary">
+                    <view>{{contacts.qq}}</view>
+                </view>
+                <!-- <view class="weui-cell__ft weui-cell__ft_in-access"></view> -->
+              </view>
+
+              <view wx:if="{{hasphone}}" class="weui-cell weui-cell_access">
+                <image src="{{phoneicon}}" style="width: 20px;height: 20px;margin-right: 5px" />
+                <view class="weui-cell__bd weui-cell_primary">
+                    <view>{{contacts.phone}}</view>
+                </view>
+                <!-- <view class="weui-cell__ft weui-cell__ft_in-access"></view> -->
+              </view>
+
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <button 
+      class="weui-btn sharebutton" 
+      type="primary" 
+      style='background-color:#f96159;{{hassharebutton}}' 
+      hover-class='none'
+      bindtap='showDialog'
+    >
+      <view style='height: 70rpx; display: flex;align-items: center;justify-content: center;'>
+        <image 
+          src='/icon/spread.png' 
+          style='width:35rpx;height:35rpx;'
+        />
+        <text class='sharetext'>分享</text>
+      </view>
+    </button>
+
+
+
+    <view wx:if="{{display}}">
+      <view wx:for="{{detail.img}}" class='image' wx:key="{{detail.img}}">
+        <image src='{{item}}' mode="widthFix" data-src='{{item}}' style='width:100%;' bindtap='previewImage'></image>
+      </view>
+    </view>
+  </view>
+</view>
+<modal id='modal' 
+    modalTitle='这里是标题' 
+    modalMsg='我是内容' 
+    bind:cancelEvent="_cancelEvent" 
+    bind:bull="_bull"
+    bind:preventtap="_preventtap"  
+    bind:confirmEvent="_confirmEvent"
+    bind:makephoto="_makephoto">
+</modal>

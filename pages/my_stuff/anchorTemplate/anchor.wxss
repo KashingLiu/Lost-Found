@@ -1,0 +1,120 @@
+.anchor {
+  display:flex;
+  flex-direction: column;
+  color: #c6c6c6;
+  font-size:20rpx;
+  width:50%;
+  height: 525rpx;
+}
+.eachitem {
+  margin-left: 11rpx;
+  margin-right: 11rpx;
+  margin-top: 8rpx;
+  margin-bottom: 18rpx;
+}
+.eachitem .ava {
+   width: 100%;
+   height: 355rpx;
+   overflow:hidden;
+   position: relative; 
+}
+.eachitem .ava .postImg {
+   width: 100%;
+   height: 100%;
+   border-top-left-radius: 19rpx;
+   border-top-right-radius: 19rpx;
+}
+.eachitem .ava .lost {
+   font-size: 28rpx;
+   color: #fff;
+   background: #f96159;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   padding: 3rpx 8rpx;
+   border-radius: 0 20rpx 0 0;
+}
+.eachitem .ava .found {
+   font-size: 28rpx;
+   color: #fff;
+   background: #ffd900;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   padding: 3rpx 8rpx;
+   border-radius: 0 20rpx 0 0;
+}
+
+.eachitem .info {
+   width: 100%;  
+   /* height: 135rpx; */
+  height: 155rpx;
+   overflow: hidden;
+   position: relative; 
+}
+.eachitem .info .underground{
+  /* height: 135rpx; */
+  height: 155rpx;
+  width: 100%;
+  border-bottom-left-radius: 19rpx;
+  border-bottom-right-radius: 19rpx;
+}
+.eachitem .info .stuff {
+  font-size: 30rpx;
+  font-weight: bold;
+  line-height: 140%;
+   color: black;
+   position: absolute;
+   top: 5rpx;
+   left: 0;
+   padding-left: 5rpx;
+   padding-right: 5rpx;
+   /* padding: 6rpx 14rpx; */
+}
+.eachitem .info .time {
+  font-size: 28rpx;
+   color: #b3b3b3;
+   position: absolute;
+   bottom: 5rpx;
+   right: 2rpx;
+   padding: 6rpx 14rpx;
+}
+.eachitem .info .ok {
+  font-size: 13px;
+  position: absolute;
+  bottom: 4px;
+  right: 10px;
+  height: 60rpx;
+  width: 145rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.eachitem .info .del {
+  font-size: 13px;
+  position: absolute;
+  bottom: 4px;
+  left: 10px;
+  height: 60rpx;
+  width: 145rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lbs {
+  display:flex;
+  flex-direction: row;
+  margin-bottom: 20rpx;
+  align-items: center;
+}
+.lbs>image {
+  width: 21rpx;
+  height: 28rpx;
+  margin-right: 12rpx;
+}
+.lbs text {
+  margin-right: 14rpx;
+}
+

@@ -1,0 +1,19 @@
+.ava {
+  width:79px;
+  height:79px;
+  overflow:hidden;
+  position: relative; 
+}
+
+.ava .trash {
+  width: 50rpx;
+  height: 50rpx;
+   font-size: 22rpx;
+   color: #fff;
+   background: rgba(105,159,232,0);
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   /* padding: 6rpx 16rpx; */
+   /* border-radius: 0 30rpx 0 0; */
+}

@@ -1,0 +1,18 @@
+<import src="/pages/index/anchorTemplate/anchor.wxml"/>
+
+<view wx:if="{{!hide}}" class="container">
+
+    <view class='list1' >
+
+        <view  class="list" wx:if="{{isNone}}">
+          <block wx:for="{{currentList}}" wx:for-item="item" wx:key="{{item.id}}">
+            <view class="anchor" catchtap="detailTap" data-anchorobj="{{item}}">
+              <template is="anchorTmp" data="{{item}}"/>
+            </view>
+          </block>
+        </view>
+        <view wx:else>空</view>
+
+    </view>
+    
+</view>

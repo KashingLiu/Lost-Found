@@ -1,0 +1,14 @@
+<template name="anchorTmp">
+  <view class='eachitem'>
+    <view class="ava">
+      <image class="postImg" mode='aspectFill' src="{{item.img[0]}}"></image>
+      <text wx:if="{{item.type=='失物招领'}}" class="lost">{{item.type}}</text>
+      <text wx:elif="{{item.type=='寻物启事'}}" class="found">{{item.type}}</text>
+    </view>
+    <view class="info">
+      <image src='/images/white.png' class='underground'></image>
+      <text class="time">{{item.time}}</text>
+      <text class="stuff">{{item.name}}</text>
+    </view>
+  </view>
+</template>

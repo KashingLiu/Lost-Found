@@ -1,0 +1,16 @@
+<view class="page">
+    <view class="page__hd" style='padding:20px;'>
+        <view class="page__title">由校学生会维权服务部运营</view>
+        <view class="page__title">由刘家成提供技术支持</view>
+    </view>
+    <!-- <view class="page__bd page__bd_spacing"> -->
+        <view class="weui-footer">
+            <view class="weui-footer__text">感谢使用</view>
+            <view class="weui-footer__text">首页图片来源于Freepik</view>
+            <view class="weui-footer__text">Copyright © 1998-2019 Kashingliu</view>
+        </view>
+
+
+
+    <!-- </view> -->
+</view>

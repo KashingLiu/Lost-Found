@@ -1,0 +1,116 @@
+<form bindsubmit="up_img">
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="page__bd">
+        <!-- <view class="weui-cells__title">物品名称</view> -->
+        <view 
+          class="weui-cells weui-cells_after-title" 
+          style='margin-top: 5px;'
+        >
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">
+                    <input name="stuff_name" class="weui-input" placeholder="物品名称（20字以内）" style='font-size:17px;'/>
+                </view>
+            </view>
+        </view>
+
+        <!-- <view class="weui-cells__title">物品详情</view> -->
+        <view 
+          class="weui-cells weui-cells_after-title" 
+          style='margin-top: 5px;'
+        >
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea 
+                      class="weui-textarea"
+                      placeholder="物品详情" 
+                      style="height: 5em" 
+                      value='{{text_area}}'
+                      bindblur='bindTextAreaBlur'
+                    />
+                      <view class="weui-uploader">
+                        <view class="weui-uploader__bd">
+                            <view class="weui-uploader__files" id="uploaderFiles">
+                                <block wx:for="{{files}}" wx:key="*this">
+                                    <view 
+                                      class="weui-uploader__file ava" 
+                                      bindtap="previewImage" 
+                                      id="{{item}}">
+                                        <image 
+                                          class="weui-uploader__img" 
+                                          src="{{item}}" 
+                                          mode="aspectFill" />
+                                        <image 
+                                          class="trash" 
+                                          src='../../../icon/create/general/trash.png'
+                                          catchtap='deleteimg' />
+                                    </view>
+                                </block>
+                                
+                            </view>
+                            <view class="weui-uploader__input-box">
+                                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                            </view>
+                        </view>
+                      </view>
+                </view>
+            </view>
+        </view>
+
+        
+        <view 
+          class="weui-cells weui-cells_after-title item"
+          style='margin-top: 5px;'
+        >
+          <view 
+            class="weui-cell"
+            style='padding: 5px 0 7px 5px;'
+          >
+            <radio-group class="radio-group" bindchange="radioChange">
+                <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}" style='width:350rpx;' color='#f96159'>
+                    <text>{{item.value}}</text>
+                </radio>
+            </radio-group>
+          </view>
+        </view>
+
+
+        <view 
+          class="weui-cells weui-cells_after-title"
+          style='margin-top: 5px;'
+        >
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">您的QQ</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input name='input_qq' class="weui-input" type='number' placeholder="请输入QQ"/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">您的手机</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input name='input_phone' class="weui-input" type='number' placeholder="请输入手机号码" />
+                </view>
+            </view>
+            <view wx:if="{{select}}" class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">领取地点</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input name='input_place' class="weui-input" placeholder="请输入领取地点" />
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-btn-area" style='margin-top:15rpx;'>
+            <button 
+              class="weui-btn" 
+              form-type="submit"
+              style="background-color:#f96159;color:white;"
+            >确定</button>
+        </view>
+    </view>
+</view>
+</form>

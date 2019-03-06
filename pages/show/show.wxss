@@ -1,0 +1,41 @@
+/* pages/show/show.wxss */
+.mediabox {
+  /* padding: 10px; */
+}
+.mediabox .title {
+  font-size: 20px;
+}
+.mediabox .detail {
+  font-size: 16px;
+}
+.mediabox .infotext {
+  font-size: 14px;
+}
+.item1 {
+  display: flex;
+}
+
+.image {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.sharebutton {
+  width:30%;
+  background-color:#f96159;
+  height:70rpx;
+  border-radius:11px;
+  position:fixed;
+  z-index:999;
+  border-top:0;
+  border-bottom:0;
+  left: 50px;
+  right: 50px;
+  bottom: 30rpx;
+}
+
+.sharetext {
+  margin-left: 4px;
+  line-height: 100%;
+  font-size: 34rpx;
+}
