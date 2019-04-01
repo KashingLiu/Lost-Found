@@ -3,4 +3,5 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)   
 基于微信小程序的失物招领系统
 
-# 目录结构
+# 界面展示
+![](https://ws1.sinaimg.cn/large/006tKfTcly1g1myly9oyoj30ho0ven16.jpg)
